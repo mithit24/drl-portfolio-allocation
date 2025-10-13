@@ -1,9 +1,34 @@
+# Python cache and artifacts
 __pycache__/
-.ipynb_checkpoints/
-*.pkl
-*.csv
 *.pyc
+*.pyo
+*.pyd
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Data files (raw + processed)
 data/raw/
 data/processed/
+*.csv
+*.pkl
+*.h5
+
+# Logs, models, and large outputs
+logs/
+models/
+runs/
+outputs/
+
+# Environment and configs
 .env
+*.env
+.DS_Store
+
+# Temporary or local notebooks
+Untitled*.ipynb
+
+# IDE / Editor files
+.vscode/
+.idea/
 
