@@ -1,34 +1,26 @@
-# Python cache and artifacts
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.pkl
 
-# Jupyter notebooks checkpoints
+# Virtual environments
+venv/
+.env/
+.drl/
+*.egg-info/
+
+# Jupyter
 .ipynb_checkpoints/
 
-# Data files (raw + processed)
+# Logs and models
+logs/
+tb_sac_portfolio/
+models/
+
+# Data
 data/raw/
 data/processed/
-*.csv
-*.pkl
-*.h5
 
-# Logs, models, and large outputs
-logs/
-models/
-runs/
-outputs/
-
-# Environment and configs
-.env
-*.env
-.DS_Store
-
-# Temporary or local notebooks
-Untitled*.ipynb
-
-# IDE / Editor files
-.vscode/
-.idea/
 
