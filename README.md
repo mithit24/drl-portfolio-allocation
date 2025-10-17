@@ -36,7 +36,81 @@ This project implements a **Deep Reinforcement Learning (DRL)** framework for mu
 ├── README.md
 └── requirements.txt
 ```
-## 1. Clone the Repository
+## Clone this Repository
 
 git clone https://github.com/mithit24/drl-portfolio-allocation.git
 cd drl-portfolio-allocation
+
+## Create and activate this environment
+
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+## Install dependencies 
+
+pip install -r requirements.txt
+
+## Training 
+
+To train the SAC agent on 2-minute ETF data:  jupyter notebook SAC_training.ipynb
+
+or run the script version:python train_sac.ipynb
+
+Training logs are saved under ./tb_sac_portfolio/ and can be viewed with:  tensorboard --logdir=./tb_sac_portfolio/
+
+## Evaluation
+
+After training, you can:
+
+- Evaluate performance on a held-out time window 
+
+- Benchmark against SPY and equal-weight strategies
+
+- Plot equity curves and compute Sharpe ratios
+
+
+**Example** : 
+
+```plaintext
+from stable_baselines3 import SAC
+
+from stable_baselines3.common.evaluation import evaluate_policy
+
+model = SAC.load("models/sac_portfolio.zip")
+
+mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_episodes=5)
+
+print(f"Mean reward: {mean_reward:.4f}, Std: {std_reward:.4f}")
+
+```
+## Model Details
+
+- Algorithm: Soft Actor–Critic (off-policy, entropy-regularized)
+
+- Network: 2-layer MLP (512 units each)
+
+- Buffer: 500,000 transitions
+
+- Learning rate: 5e-5
+
+- Discount factor: 0.999
+
+- Action space: Continuous [0,1] target weights per asset
+
+## Requirements
+
+- Python ≥ 3.9
+
+- pandas, numpy, matplotlib
+
+- stable-baselines3
+
+- gymnasium
+
+- yfinance
+
+- torch
+
+### Author 
+Mithit Sangwan
+https://github.com/mithit24
