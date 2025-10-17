@@ -4,7 +4,7 @@
 
 This project implements a **Deep Reinforcement Learning (DRL)** framework for multi-asset portfolio allocation using high-frequency ETF data. The system trains a Soft Actor–Critic (SAC) agent to allocate capital dynamically across multiple assets, with realistic trading frictions and feature engineering.
 
-## 📌 Key Features
+##  Key Features
 - **Data Pipeline**: Automated download and cleaning of 2-minute ETF data from Yahoo Finance.  
 - **Feature Engineering**: Momentum, volatility, RSI, MACD, Z-scores, and volume dynamics built per asset.  
 - **Custom Gym Environment**: `PortfolioEnv` and `PortfolioGym` simulate realistic portfolio trading with:
@@ -16,7 +16,7 @@ This project implements a **Deep Reinforcement Learning (DRL)** framework for mu
 
 ---
 
-## 🧱 Project Structure
+##  Project Structure
 
 ```plaintext
 .
@@ -35,3 +35,8 @@ This project implements a **Deep Reinforcement Learning (DRL)** framework for mu
 ├── feature_engineering.ipynb    # Data & feature generation
 ├── README.md
 └── requirements.txt
+
+## 1. Clone the Repository
+
+git clone https://github.com/mithit24/drl-portfolio-allocation.git
+cd drl-portfolio-allocation
