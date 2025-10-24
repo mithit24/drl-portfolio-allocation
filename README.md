@@ -34,7 +34,7 @@ This project implements a **Deep Reinforcement Learning (DRL)** framework for mu
 ├── train_sac.ipynb              # Script-style training alternative
 ├── feature_engineering.ipynb    # Data & feature generation
 ├── README.md
-└── requirements.txt
+
 ```
 ## Clone this Repository
 
